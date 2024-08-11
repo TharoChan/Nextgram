@@ -5,19 +5,19 @@ import { getMyImages } from "~/server/queries";
 
 export const dynamic = "force-dynamic";
 
-async function Gallery() {
+async function Images() {
   const images = await getMyImages();
 
   return (
-    <div className="flex flex-wrap justify-center gap-4">
-      {images.map((image) => (
+    <div className="flex flex-wrap justify-center gap-4 p-4">
+      {[...images, ...images, ...images, ...images, ...images].map((image) => (
         <div key={image.id} className="flex h-48 w-48 flex-col">
           <Link href={`/img/${image.id}`}>
             <Image
               src={image.url}
               style={{ objectFit: "contain" }}
-              width={480}
-              height={480}
+              width={192}
+              height={192}
               alt={image.name}
             />
           </Link>
@@ -27,16 +27,17 @@ async function Gallery() {
     </div>
   );
 }
+
 export default async function HomePage() {
   return (
-    <main>
+    <main className="">
       <SignedOut>
         <div className="h-full w-full text-center text-2xl">
-          Please sign in to view the gallery
+          Please sign in above
         </div>
       </SignedOut>
       <SignedIn>
-        <Gallery />
+        <Images />
       </SignedIn>
     </main>
   );
