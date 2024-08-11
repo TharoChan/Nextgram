@@ -1,4 +1,4 @@
-import { FullPageImageView } from "~/app/common/full-page-image-view";
+import { FullPageImageView } from "~/common/full-page-image-view";
 
 export default function PhotoModal({
   params: { id: photoId },
