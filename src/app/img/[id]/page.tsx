@@ -1,12 +1,13 @@
-import FullPageImageView from "~/app/common/full-page-image-view";
+import { FullPageImageView } from "~/app/common/full-page-image-view";
 
-export default function PhotoPage({
+export default function PhotoModal({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) {
-  const idAsNumber = parseInt(photoId);
-  if (Number.isNaN(idAsNumber)) throw new Error("Invalid ID");
-
-  return <FullPageImageView photoId={idAsNumber} />;
+  return (
+    <div className="flex h-full min-h-0 w-full min-w-0 overflow-y-hidden">
+      <FullPageImageView photoId={photoId} />
+    </div>
+  );
 }
