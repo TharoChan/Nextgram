@@ -2,8 +2,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { getMyImages } from "~/server/queries";
-
-export const dynamic = "force-dynamic";
+import DigitalClock from "./timer/_components/clock";
 
 async function Images() {
   const images = await getMyImages();
@@ -37,7 +36,7 @@ export default async function HomePage() {
         </div>
       </SignedOut>
       <SignedIn>
-        <Images />
+        <DigitalClock />
       </SignedIn>
     </main>
   );

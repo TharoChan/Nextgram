@@ -32,6 +32,7 @@
     "postgres": "^3.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-use-precision-timer": "^3.5.5",
     "server-only": "^0.0.1",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
@@ -54,7 +55,7 @@
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "ct3aMetadata": {
     "initVersion": "7.36.2"
